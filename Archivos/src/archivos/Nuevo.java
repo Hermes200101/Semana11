@@ -156,31 +156,25 @@ public class Nuevo extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btnCancelarActionPerformed
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
-       
-       e.setCodigo(Integer.parseInt(txtCodigo.getText()));
-       e.setNombre(txtNombres.getText());
-       e.setApellidos(txtApellidos.getText());
-       e.setTelefono(txtTelefono.getText());
-       e.setSemestre(Integer.parseInt(txtSemestre.getText()));
-       lista.add(e);
-       a.Exito();
+       a.Guardar();
+       //a.Exito();
        
     }//GEN-LAST:event_btnGuardarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnCancelar;
-    private javax.swing.JButton btnGuardar;
+    public static javax.swing.JButton btnCancelar;
+    public static javax.swing.JButton btnGuardar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JTextField txtApellidos;
-    private javax.swing.JTextField txtCodigo;
-    private javax.swing.JTextField txtNombres;
-    private javax.swing.JTextField txtSemestre;
-    private javax.swing.JTextField txtTelefono;
+    public static javax.swing.JTextField txtApellidos;
+    public static javax.swing.JTextField txtCodigo;
+    public static javax.swing.JTextField txtNombres;
+    public static javax.swing.JTextField txtSemestre;
+    public static javax.swing.JTextField txtTelefono;
     // End of variables declaration//GEN-END:variables
 }

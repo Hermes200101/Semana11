@@ -8,6 +8,9 @@ package Clase;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import Clase.Estudiante;
+import archivos.Nuevo;
+import static archivos.Nuevo.*;
+import java.io.FileWriter;
 
 /**
  *
@@ -16,6 +19,9 @@ import Clase.Estudiante;
 public class Arreglo {
     
     public static ArrayList<Estudiante>lista = new ArrayList();
+    Estudiante e = new Estudiante();
+
+    
     
     public void Exito(){
         try {
@@ -27,17 +33,24 @@ public class Arreglo {
         
     }
     
-    public void Buscar(int Codigo){
+    
+    public void Guardar(){
+       e.setCodigo(Integer.parseInt(txtCodigo.getText()));
+       e.setNombre(txtNombres.getText());
+       e.setApellidos(txtApellidos.getText());
+       e.setTelefono(txtTelefono.getText());
+       e.setSemestre(Integer.parseInt(txtSemestre.getText()));
+       lista.add(e);
+    }
+    
+    
+    public void guardarDatos(Estudiante estudiante){
+        try {
+            FileWriter fs = new FileWriter("",true);
+            
+        } catch (Exception e) {
+        }
         
-//        for(int i=0; i<=lista.size();i++){
-//            if (lista.get(i).getCodigo() == Codigo){
-//                JOptionPane.showMessageDialog(null, "CODIGO ENCONTRADO");
-//            }
-//            else{
-//                JOptionPane.showMessageDialog(null, "CODIGO NO EXISTE");
-//            }
-//            
-//        }
     }
 
 }

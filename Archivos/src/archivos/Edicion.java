@@ -177,7 +177,7 @@ public class Edicion extends javax.swing.JInternalFrame {
         int c = Integer.parseInt(txtConsultarCodigo.getText());
         for(int i=0;i<=lista.size();i++ ){
             if(lista.get(i).getCodigo() == c){
-                a.Buscar(i);
+                //a.Buscar(i);
             }
             
         }
