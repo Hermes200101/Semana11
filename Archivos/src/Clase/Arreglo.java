@@ -51,14 +51,17 @@ public class Arreglo {
             FileWriter fw = new FileWriter("Estudiantes.dat",true);
             BufferedWriter bw = new BufferedWriter(fw);
             PrintWriter pw = new PrintWriter(bw);
-            pw.print(","+e.getCodigo());
+            pw.print(""+e.getCodigo());
             pw.print(","+e.getNombre());
             pw.print(","+e.getApellidos());
             pw.print(","+e.getTelefono());
-            pw.print(","+e.getSemestre());
+            pw.print(""+e.getSemestre());
+            pw.print("\n");
             pw.close();
+                
             
         } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "LLORELO :(");
         }
         
     }
