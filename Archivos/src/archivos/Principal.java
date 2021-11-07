@@ -141,7 +141,7 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenu3ActionPerformed
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
-        JOptionPane.showMessageDialog(Escritorio, "DESARROLLADO POR : WLFRAN STEVEN FORERO\n"+"EVELIN SOLER BARRAGAN\n"+"HERMES DUVAN CASTRO\n");
+        JOptionPane.showMessageDialog(Escritorio, "DESARROLLADO POR :\n"+" WLFRAN STEVEN FORERO\n"+" EVELIN SOLER BARRAGAN\n"+" HERMES DUVAN CASTRO\n");
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     /**
