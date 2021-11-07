@@ -21,19 +21,19 @@ public class Estudiante {
         return Codigo;
     }
 
-    public static String getNombre() {
+    public String getNombre() {
         return Nombre;
     }
 
-    public static String getApellidos() {
+    public String getApellidos() {
         return Apellidos;
     }
 
-    public static String getTelefono() {
+    public String getTelefono() {
         return telefono;
     }
 
-    public static int getSemestre() {
+    public int getSemestre() {
         return semestre;
     }
 

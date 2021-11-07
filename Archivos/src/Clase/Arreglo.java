@@ -10,7 +10,9 @@ import javax.swing.JOptionPane;
 import Clase.Estudiante;
 import archivos.Nuevo;
 import static archivos.Nuevo.*;
+import java.io.BufferedWriter;
 import java.io.FileWriter;
+import java.io.PrintWriter;
 
 /**
  *
@@ -46,7 +48,15 @@ public class Arreglo {
     
     public void guardarDatos(Estudiante estudiante){
         try {
-            FileWriter fs = new FileWriter("",true);
+            FileWriter fw = new FileWriter("Estudiantes.dat",true);
+            BufferedWriter bw = new BufferedWriter(fw);
+            PrintWriter pw = new PrintWriter(bw);
+            pw.print(","+e.getCodigo());
+            pw.print(","+e.getNombre());
+            pw.print(","+e.getApellidos());
+            pw.print(","+e.getTelefono());
+            pw.print(","+e.getSemestre());
+            pw.close();
             
         } catch (Exception e) {
         }
