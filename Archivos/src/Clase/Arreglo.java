@@ -7,8 +7,10 @@ package Clase;
 
 import java.io.*;
 import java.nio.Buffer;
+import java.util.StringTokenizer;
 import java.util.Vector;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 public class Arreglo {
 
@@ -33,6 +35,28 @@ public class Arreglo {
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
         }
+    }
+    
+    public tabla(){
+        Vector titulo = new Vector();
+        titulo.addElement("Codigo");
+        titulo.addElement("Nombre");
+        titulo.addElement("Apellido");
+        titulo.addElement("Telefono");
+        titulo.addElement("Semestre");
+        
+        DefaultTableModel tabla = new DefaultTableModel(titulo,0);
+        
+        try {
+            FileReader fr = new FileReader("Alumno.txt");
+            BufferedReader br = new BufferedReader(fr);
+            String w;
+            while((w = br.readLine())!=null){
+                StringTokenizer dato = new StringTokenizer(w,"");
+            }
+        } catch (Exception e) {
+        }
+        
     }
     
 }
