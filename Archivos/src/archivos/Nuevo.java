@@ -158,6 +158,7 @@ public class Nuevo extends javax.swing.JInternalFrame {
        a.datos();
        a.guardar(e);
        a.guardarArchivo(e);
+       a.guardarArchivoB(e);
        a.limpiarCasillas();
     }//GEN-LAST:event_btnGuardarActionPerformed
 

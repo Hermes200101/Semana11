@@ -44,12 +44,29 @@ public class Arreglo {
             BufferedWriter bw = new BufferedWriter(fw);
             PrintWriter pw = new PrintWriter(bw);
             pw.print(estudiante.getCodigo());
-            pw.print(","+estudiante.getNombre());
-            pw.print(","+estudiante.getApellidos());
-            pw.print(","+estudiante.getTelefono());
-            pw.println(","+estudiante.getSemestre());
+            pw.print("|"+estudiante.getNombre());
+            pw.print("|"+estudiante.getApellidos());
+            pw.print("|"+estudiante.getTelefono());
+            pw.println("|"+estudiante.getSemestre());
             pw.close();   
             JOptionPane.showMessageDialog(null, "Alumno registrado");
+            
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
+        }
+    }
+    
+    public void guardarArchivoB(Estudiante estudiante){
+        try {
+            FileWriter fw = new FileWriter("AlumnoB.txt", true);
+            BufferedWriter bw = new BufferedWriter(fw);
+            PrintWriter pw = new PrintWriter(bw);
+            pw.println(estudiante.getCodigo());
+            pw.println(estudiante.getNombre());
+            pw.println(estudiante.getApellidos());
+            pw.println(estudiante.getTelefono());
+            pw.println(estudiante.getSemestre());
+            pw.close();   
             
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
@@ -71,7 +88,7 @@ public class Arreglo {
             BufferedReader br = new BufferedReader(fr);
             String w;
             while((w = br.readLine())!=null){
-                StringTokenizer dato = new StringTokenizer(w,",");
+                StringTokenizer dato = new StringTokenizer(w,"|");
                 Vector a = new Vector();
                 while(dato.hasMoreTokens()){
                     a.addElement(dato.nextToken());
@@ -90,7 +107,7 @@ public class Arreglo {
         String codigo = txtConsultarCodigo.getText();
         try {
             
-            BufferedReader br2 = new BufferedReader(new FileReader("Alumno.txt"));
+            BufferedReader br2 = new BufferedReader(new FileReader("AlumnoB.txt"));
             String linea;
             int encontrado = 0;
 
