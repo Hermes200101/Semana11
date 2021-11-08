@@ -37,7 +37,7 @@ public class Arreglo {
         }
     }
     
-    public tabla(){
+    public DefaultTableModel tabla(){
         Vector titulo = new Vector();
         titulo.addElement("Codigo");
         titulo.addElement("Nombre");
@@ -52,10 +52,18 @@ public class Arreglo {
             BufferedReader br = new BufferedReader(fr);
             String w;
             while((w = br.readLine())!=null){
-                StringTokenizer dato = new StringTokenizer(w,"");
+                StringTokenizer dato = new StringTokenizer(w,",");
+                Vector a = new Vector();
+                while(dato.hasMoreTokens()){
+                    a.addElement(dato.nextToken());
+                }
+                tabla.addRow(a);
             }
         } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
         }
+        
+        return tabla;
         
     }
     
