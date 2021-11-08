@@ -6,6 +6,8 @@
 package archivos;
 
 import Clase.Arreglo;
+import java.util.Vector;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -17,10 +19,21 @@ public class Lista extends javax.swing.JInternalFrame {
      * Creates new form Lista
      */
     Arreglo a = new Arreglo();
+    DefaultTableModel tabla;
+    Vector titulo = new Vector();
+    
     public Lista() {
         initComponents();
-        //a.llenado();
-        a.llenado();
+        
+        titulo.addElement("Codigo");
+        titulo.addElement("Nombre");
+        titulo.addElement("Apellido");
+        titulo.addElement("Telefono");
+        titulo.addElement("Semestre");
+        tabla = new DefaultTableModel(titulo,0);
+        TablaLista.setModel(tabla);
+        
+        TablaLista.setModel(a.tabla());
         
     }
 

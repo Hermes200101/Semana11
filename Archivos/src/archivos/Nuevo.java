@@ -6,7 +6,6 @@
 package archivos;
 
 import Clase.Arreglo;
-import static Clase.Arreglo.lista;
 import Clase.Estudiante;
 import java.util.ArrayList;
 
@@ -156,13 +155,9 @@ public class Nuevo extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btnCancelarActionPerformed
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
-       a.Guardar();
-       a.guardarDatos3();
-       a.limpiezaCasillas();
-       a.Exito();
-       
-       
-       
+       a.datos();
+       a.guardar(e);
+       a.guardarArchivo(e);
     }//GEN-LAST:event_btnGuardarActionPerformed
 
 

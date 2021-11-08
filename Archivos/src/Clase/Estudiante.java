@@ -17,44 +17,63 @@ public class Estudiante {
     private static String telefono;
     private static int semestre;
 
-    public int getCodigo() {
+    public Estudiante() {
+    }
+    
+    public Estudiante(int Codigo, String Nombre, String Apellidos, String telefono, int semestre) {
+        Estudiante.Codigo = Codigo;
+        Estudiante.Nombre = Nombre;
+        Estudiante.Apellidos = Apellidos;
+        Estudiante.telefono = telefono;
+        Estudiante.semestre = semestre;
+    }
+
+    public static int getCodigo() {
         return Codigo;
     }
 
-    public String getNombre() {
-        return Nombre;
-    }
-
-    public String getApellidos() {
-        return Apellidos;
-    }
-
-    public String getTelefono() {
-        return telefono;
-    }
-
-    public int getSemestre() {
-        return semestre;
-    }
-
-    public void setCodigo(int Codigo) {
+    public static void setCodigo(int Codigo) {
         Estudiante.Codigo = Codigo;
     }
 
-    public void setNombre(String Nombre) {
+    public static String getNombre() {
+        return Nombre;
+    }
+
+    public static void setNombre(String Nombre) {
         Estudiante.Nombre = Nombre;
     }
 
-    public void setApellidos(String Apellidos) {
+    public static String getApellidos() {
+        return Apellidos;
+    }
+
+    public static void setApellidos(String Apellidos) {
         Estudiante.Apellidos = Apellidos;
     }
 
-    public void setTelefono(String telefono) {
+    public static String getTelefono() {
+        return telefono;
+    }
+
+    public static void setTelefono(String telefono) {
         Estudiante.telefono = telefono;
     }
 
-    public void setSemestre(int semestre) {
+    public static int getSemestre() {
+        return semestre;
+    }
+
+    public static void setSemestre(int semestre) {
         Estudiante.semestre = semestre;
     }
+    
+    
+    
+    
+
+    
+
+    
 
 }

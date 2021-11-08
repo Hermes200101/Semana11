@@ -6,7 +6,6 @@
 package archivos;
 
 import Clase.Arreglo;
-import static Clase.Arreglo.lista;
 import Clase.Estudiante;
 
 /**

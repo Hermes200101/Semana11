@@ -5,6 +5,7 @@
  */
 package Clase;
 
+import archivos.Nuevo;
 import java.io.*;
 import java.nio.Buffer;
 import java.util.StringTokenizer;
@@ -16,8 +17,15 @@ public class Arreglo {
 
     Vector vector = new Vector();
     
-    public void guardar(String alumno){
-        vector.addElement(alumno);
+    public void datos(){
+        Estudiante.setCodigo(Integer.parseInt(Nuevo.txtCodigo.getText()));
+        Estudiante.setNombre(Nuevo.txtNombres.getText());
+        Estudiante.setApellidos(Nuevo.txtApellidos.getText());
+        Estudiante.setTelefono(Nuevo.txtTelefono.getText());
+        Estudiante.setSemestre(Integer.parseInt(Nuevo.txtSemestre.getText()));
+    }
+    public void guardar(Estudiante estudiante){
+        vector.addElement(estudiante);
     }
     
     public void guardarArchivo(Estudiante estudiante){
@@ -30,7 +38,8 @@ public class Arreglo {
             pw.print(","+estudiante.getApellidos());
             pw.print(","+estudiante.getTelefono());
             pw.print(","+estudiante.getSemestre());
-            pw.close();         
+            pw.close();   
+            JOptionPane.showMessageDialog(null, "Alumno registrado");
             
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
