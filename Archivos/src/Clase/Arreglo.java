@@ -81,7 +81,7 @@ public class Arreglo {
 
     }
 
-    public void llenado() throws FileNotFoundException {
+    public void llenado()  {
 
 //        tabla.addColumn("CÓDIGO");
 //        tabla.addColumn("NOMBRES");
@@ -142,30 +142,8 @@ DefaultTableModel dt = new DefaultTableModel(){
         }
     }
     
-    public void cargar_txt(){
-        File ruta = new File("Estudiantes.dat");
-        try{
-            
-            FileReader fi = new FileReader(ruta);
-            BufferedReader bu = new BufferedReader(fi);
-            
-            
-            String linea = null;
-            while((linea = bu.readLine())!=null){
-                StringTokenizer st = new StringTokenizer(linea, ",");
-                e = new Producto();
-                e.setCodigo(Integer.parseInt(st.nextToken()));
-                e.setNombre(st.nextToken());
-                e.setPrecio(Double.parseDouble(st.nextToken()));
-                e.setDescripcion(st.nextToken());
-                lista.add(e);
-            }
-            bu.close();
-        }catch(Exception ex){
-            mensaje("Error al cargar archivo: "+ex.getMessage());
-            System.out.println(ex.getMessage());
-        }
-    }
+    
+    
     
     
 }
