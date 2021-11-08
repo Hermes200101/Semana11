@@ -37,7 +37,7 @@ public class Arreglo {
             pw.print(","+estudiante.getNombre());
             pw.print(","+estudiante.getApellidos());
             pw.print(","+estudiante.getTelefono());
-            pw.print(","+estudiante.getSemestre());
+            pw.println(","+estudiante.getSemestre());
             pw.close();   
             JOptionPane.showMessageDialog(null, "Alumno registrado");
             
