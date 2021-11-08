@@ -18,6 +18,7 @@ import javax.swing.table.DefaultTableModel;
 public class Arreglo {
 
     Vector vector = new Vector();
+    Estudiante e;
     
     public void datos(){
         Estudiante.setCodigo(Integer.parseInt(Nuevo.txtCodigo.getText()));
@@ -120,8 +121,6 @@ public class Arreglo {
             JOptionPane.showMessageDialog(null, e);
         }
     }
-    
-    
    
     
 }
