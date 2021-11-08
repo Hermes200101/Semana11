@@ -11,16 +11,16 @@ package Clase;
  */
 public class Estudiante {
 
-    private static int Codigo;
+    private static String Codigo;
     private static String Nombre;
     private static String Apellidos;
     private static String telefono;
-    private static int semestre;
+    private static String semestre;
 
     public Estudiante() {
     }
     
-    public Estudiante(int Codigo, String Nombre, String Apellidos, String telefono, int semestre) {
+    public Estudiante(String Codigo, String Nombre, String Apellidos, String telefono, String semestre) {
         Estudiante.Codigo = Codigo;
         Estudiante.Nombre = Nombre;
         Estudiante.Apellidos = Apellidos;
@@ -28,11 +28,11 @@ public class Estudiante {
         Estudiante.semestre = semestre;
     }
 
-    public static int getCodigo() {
+    public static String getCodigo() {
         return Codigo;
     }
 
-    public static void setCodigo(int Codigo) {
+    public static void setCodigo(String Codigo) {
         Estudiante.Codigo = Codigo;
     }
 
@@ -60,11 +60,11 @@ public class Estudiante {
         Estudiante.telefono = telefono;
     }
 
-    public static int getSemestre() {
+    public static String getSemestre() {
         return semestre;
     }
 
-    public static void setSemestre(int semestre) {
+    public static void setSemestre(String semestre) {
         Estudiante.semestre = semestre;
     }
     

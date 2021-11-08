@@ -21,11 +21,11 @@ public class Arreglo {
     Estudiante e;
     
     public void datos(){
-        Estudiante.setCodigo(Integer.parseInt(Nuevo.txtCodigo.getText()));
+        Estudiante.setCodigo(Nuevo.txtCodigo.getText());
         Estudiante.setNombre(Nuevo.txtNombres.getText());
         Estudiante.setApellidos(Nuevo.txtApellidos.getText());
         Estudiante.setTelefono(Nuevo.txtTelefono.getText());
-        Estudiante.setSemestre(Integer.parseInt(Nuevo.txtSemestre.getText()));
+        Estudiante.setSemestre(Nuevo.txtSemestre.getText());
     }
     public void guardar(Estudiante estudiante){
         vector.addElement(estudiante);
@@ -112,7 +112,7 @@ public class Arreglo {
             int encontrado = 0;
 
             while ((linea = br2.readLine()) != null) {
-                if (linea.indexOf(codigo)!=-1) {
+                if (linea.equals(codigo)) {
 
                     String nombre = br2.readLine();
                     String apellido = br2.readLine();
