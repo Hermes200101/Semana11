@@ -82,80 +82,46 @@ public class Arreglo {
         }
         
         return tabla;
-        
+
     }
-    
-    public void buscar(){
+
+    public void buscar() {
+        String codigo = txtConsultarCodigo.getText();
         try {
-            FileReader fr2 = new FileReader("Alumno.txt");
-            BufferedReader br2 = new BufferedReader(fr2);
-            String control, controlB;
+            
+            BufferedReader br2 = new BufferedReader(new FileReader("Alumno.txt"));
+            String linea;
             int encontrado = 0;
 
-            controlB = Edicion.txtConsultarCodigo.getText();
+            while ((linea = br2.readLine()) != null) {
+                if (linea.indexOf(codigo)!=-1) {
 
-            while ((control = br2.readLine()) != null) {
-                if (control.equals(controlB)) {
-
-                    
                     String nombre = br2.readLine();
                     String apellido = br2.readLine();
                     String telefono = br2.readLine();
                     String semestre = br2.readLine();
-                    
+
                     Edicion.txtConsultarNombres.setText(nombre);
                     Edicion.txtConsultarApellidos.setText(apellido);
                     Edicion.txtConsultarTelefono.setText(telefono);
                     Edicion.txtConsultarSemestre.setText(semestre);
                     
+                    System.out.println("Usuario encontrado"+linea);
+
                     encontrado++;
-                    
+
                 }
             }
-            if(encontrado ==0){
+            if (encontrado == 0) {
                 JOptionPane.showMessageDialog(null, "El alumno no se encontro");
             }
             br2.close();
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
         }
-
-        
     }
     
-    public void Consultar(){
-    try {
-            int codigo = leerCodigo();
-            if(vector.buscar(codigo)!=null){
-                txtNombre.setText(ap.buscar(codigo).getNombre());
-                txtApellidos.setText(ap.buscar(codigo).getApellidos());
-                txtDireccion.setText(ap.buscar(codigo).getDireccion());
-                txtLugar.setText(ap.buscar(codigo).getLugar());
-                txtMotivoDeConsulta.setText(ap.buscar(codigo).getMotivoConsulta());
-                txtMedico.setText(ap.buscar(codigo).getMedico());
-                txtFecha.setText(ap.buscar(codigo).getFecha());
-                txtSexo.setText(ap.buscar(codigo).getSexo());
-            }else{
-                mensaje("¡EL CÓDIGO NO EXISTE!");
-                txtCodigo.requestFocus();
-            }          
-        } catch (Exception e) {
-            mensaje("INGRESE UN CÓDIGO VÁLIDO");
-            txtCodigo.requestFocus();
-        }
-        
-    }    
     
-     public Estudiante buscar(int codigo){///PARA BUSCAR POR CODIGO
-        for(int i = 0; i < vector.size(); i++){
-            if (vector.get(i).getCodigo()==codigo){
-                return vector.get(codigo);
-            }         
-        }return null;    
-    }
-    
-    int leerCodigo(){
-       return Integer.parseInt(txtConsultarCodigo.getText().trim());
-   }
+   
     
 }

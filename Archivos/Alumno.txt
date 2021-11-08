@@ -1,9 +1,3 @@
-123,Wlfran ,Forero,3217563410,3
-321,Steven ,Sarmiento,321,3
-1223,Hermes,Castro,312345676,4
-<<<<<<< HEAD
-653,Evelin,Soler,54536728,43
-=======
-555,dd,dd,123,5
-111,ss,ss,11,2
->>>>>>> c79d59b98f151b179e6b87c4ff209f1d08f92ac5
+1,Wlfran,Forero,321,3
+2,Hermes,Castro,222,3
+3,as,as,12,3
