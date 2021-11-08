@@ -173,7 +173,7 @@ public class Edicion extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btnCancelarActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        
+        a.buscar();
     }//GEN-LAST:event_jButton1ActionPerformed
 
 
