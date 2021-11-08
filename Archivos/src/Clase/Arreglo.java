@@ -27,6 +27,13 @@ public class Arreglo {
     public void guardar(Estudiante estudiante){
         vector.addElement(estudiante);
     }
+    public void limpiarCasillas(){
+        Nuevo.txtCodigo.setText("");
+        Nuevo.txtNombres.setText("");
+        Nuevo.txtApellidos.setText("");
+        Nuevo.txtTelefono.setText("");
+        Nuevo.txtSemestre.setText("");
+    }
     
     public void guardarArchivo(Estudiante estudiante){
         try {
