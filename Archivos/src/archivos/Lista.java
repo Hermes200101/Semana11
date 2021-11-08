@@ -5,6 +5,8 @@
  */
 package archivos;
 
+import Clase.Arreglo;
+
 /**
  *
  * @author Hermes
@@ -14,8 +16,12 @@ public class Lista extends javax.swing.JInternalFrame {
     /**
      * Creates new form Lista
      */
+    Arreglo a = new Arreglo();
     public Lista() {
         initComponents();
+        //a.llenado();
+        a.llenado();
+        
     }
 
     /**
@@ -28,13 +34,13 @@ public class Lista extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        TablaLista = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
 
         setClosable(true);
         setTitle("LISTADO");
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        TablaLista.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
                 {null, null, null, null, null},
@@ -45,7 +51,7 @@ public class Lista extends javax.swing.JInternalFrame {
                 "CÓDIGO", "NOMBRES", "APELLIDOS", "TELÉFONO", "SEMESTRE"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(TablaLista);
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Zimagen/SalirPNG.png"))); // NOI18N
         jButton1.setText("SALIR");
@@ -85,8 +91,8 @@ public class Lista extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public static javax.swing.JTable TablaLista;
     private javax.swing.JButton jButton1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
 }

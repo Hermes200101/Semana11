@@ -157,7 +157,7 @@ public class Nuevo extends javax.swing.JInternalFrame {
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
        a.Guardar();
-       a.guardarDatos(e);
+       a.guardarDatos3();
        a.limpiezaCasillas();
        a.Exito();
        

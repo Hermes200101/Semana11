@@ -174,13 +174,7 @@ public class Edicion extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btnCancelarActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        int c = Integer.parseInt(txtConsultarCodigo.getText());
-        for(int i=0;i<=lista.size();i++ ){
-            if(lista.get(i).getCodigo() == c){
-                //a.Buscar(i);
-            }
-            
-        }
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
 
@@ -194,10 +188,10 @@ public class Edicion extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JTextField txtConsultarApellidos;
-    private javax.swing.JTextField txtConsultarCodigo;
-    private javax.swing.JTextField txtConsultarNombres;
-    private javax.swing.JTextField txtConsultarSemestre;
-    private javax.swing.JTextField txtConsultarTelefono;
+    public static javax.swing.JTextField txtConsultarApellidos;
+    public static javax.swing.JTextField txtConsultarCodigo;
+    public static javax.swing.JTextField txtConsultarNombres;
+    public static javax.swing.JTextField txtConsultarSemestre;
+    public static javax.swing.JTextField txtConsultarTelefono;
     // End of variables declaration//GEN-END:variables
 }
