@@ -5,6 +5,7 @@
  */
 package Clase;
 
+import archivos.Edicion;
 import archivos.Nuevo;
 import java.io.*;
 import java.nio.Buffer;
@@ -76,4 +77,41 @@ public class Arreglo {
         
     }
     
+    public void buscar(){
+        try {
+            FileReader fr2 = new FileReader("Alumno.txt");
+            BufferedReader br2 = new BufferedReader(fr2);
+            String control, controlB;
+            int encontrado = 0;
+
+            controlB = Edicion.txtConsultarCodigo.getText();
+
+            while ((control = br2.readLine()) != null) {
+                if (control.equals(controlB)) {
+
+                    
+                    String nombre = br2.readLine();
+                    String apellido = br2.readLine();
+                    String telefono = br2.readLine();
+                    String semestre = br2.readLine();
+                    
+                    Edicion.txtConsultarNombres.setText(nombre);
+                    Edicion.txtConsultarApellidos.setText(apellido);
+                    Edicion.txtConsultarTelefono.setText(telefono);
+                    Edicion.txtConsultarSemestre.setText(semestre);
+                    
+                    encontrado++;
+                    
+                }
+            }
+            if(encontrado ==0){
+                JOptionPane.showMessageDialog(null, "El alumno no se encontro");
+            }
+            br2.close();
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
+        }
+
+        
+    }
 }
