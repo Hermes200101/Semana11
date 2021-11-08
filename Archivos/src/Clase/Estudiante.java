@@ -69,8 +69,10 @@ public class Estudiante {
     }
     
     
-    
-    
+    Arreglo a = new Arreglo();
+    public void eliminarRegistro(int i){
+        a.vector.remove(i);
+    }
 
     
 
