@@ -6,4 +6,7 @@
 3,as,as,12,3
 5,ww,ss,3215,3
 10,Wlfran,Forero,321,2
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
