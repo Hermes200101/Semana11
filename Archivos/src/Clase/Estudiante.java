@@ -11,71 +11,50 @@ package Clase;
  */
 public class Estudiante {
 
-    private static String Codigo;
+    private static int Codigo;
     private static String Nombre;
     private static String Apellidos;
     private static String telefono;
-    private static String semestre;
+    private static int semestre;
 
-    public Estudiante() {
-    }
-    
-    public Estudiante(String Codigo, String Nombre, String Apellidos, String telefono, String semestre) {
-        Estudiante.Codigo = Codigo;
-        Estudiante.Nombre = Nombre;
-        Estudiante.Apellidos = Apellidos;
-        Estudiante.telefono = telefono;
-        Estudiante.semestre = semestre;
-    }
-
-    public static String getCodigo() {
+    public int getCodigo() {
         return Codigo;
     }
 
-    public static void setCodigo(String Codigo) {
-        Estudiante.Codigo = Codigo;
-    }
-
-    public static String getNombre() {
+    public String getNombre() {
         return Nombre;
     }
 
-    public static void setNombre(String Nombre) {
-        Estudiante.Nombre = Nombre;
-    }
-
-    public static String getApellidos() {
+    public String getApellidos() {
         return Apellidos;
     }
 
-    public static void setApellidos(String Apellidos) {
-        Estudiante.Apellidos = Apellidos;
-    }
-
-    public static String getTelefono() {
+    public String getTelefono() {
         return telefono;
     }
 
-    public static void setTelefono(String telefono) {
-        Estudiante.telefono = telefono;
-    }
-
-    public static String getSemestre() {
+    public int getSemestre() {
         return semestre;
     }
 
-    public static void setSemestre(String semestre) {
+    public void setCodigo(int Codigo) {
+        Estudiante.Codigo = Codigo;
+    }
+
+    public void setNombre(String Nombre) {
+        Estudiante.Nombre = Nombre;
+    }
+
+    public void setApellidos(String Apellidos) {
+        Estudiante.Apellidos = Apellidos;
+    }
+
+    public void setTelefono(String telefono) {
+        Estudiante.telefono = telefono;
+    }
+
+    public void setSemestre(int semestre) {
         Estudiante.semestre = semestre;
     }
-    
-    
-    Arreglo a = new Arreglo();
-    public void eliminarRegistro(int i){
-        a.vector.remove(i);
-    }
-
-    
-
-    
 
 }

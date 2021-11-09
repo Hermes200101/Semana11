@@ -6,7 +6,9 @@
 package archivos;
 
 import Clase.Arreglo;
+import static Clase.Arreglo.lista;
 import Clase.Estudiante;
+import Clase.Metodos;
 
 /**
  *
@@ -19,6 +21,7 @@ public class Edicion extends javax.swing.JInternalFrame {
      */
     Arreglo a = new Arreglo();
     Estudiante e = new Estudiante();
+    Metodos m = new Metodos(); 
     public Edicion() {
         initComponents();
     }
@@ -173,7 +176,8 @@ public class Edicion extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btnCancelarActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        a.buscar();
+        m.leerCodigo();
+        m.buscarCodigo(WIDTH);
     }//GEN-LAST:event_jButton1ActionPerformed
 
 
